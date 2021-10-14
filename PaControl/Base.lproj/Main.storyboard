@@ -187,6 +187,9 @@
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Guardar"/>
+                                <connections>
+                                    <action selector="saveWithButton:" destination="Ljj-hu-93c" eventType="touchUpInside" id="bJu-JO-MJc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6UK-eS-0bX">
                                 <rect key="frame" x="50" y="302" width="39" height="21"/>
@@ -245,6 +248,16 @@
                         <viewLayoutGuide key="safeArea" id="CiS-3w-UuL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="btSave" destination="Qcl-IN-bTk" id="K5G-e8-6EU"/>
+                        <outlet property="sDRegistry" destination="dJ9-28-8ui" id="Dy1-h9-CVs"/>
+                        <outlet property="tfAC" destination="SzC-KW-lH7" id="wcv-CU-b3t"/>
+                        <outlet property="tfAge" destination="9Dp-C9-Xoe" id="K88-M0-g6p"/>
+                        <outlet property="tfName" destination="QWw-l1-5h3" id="vqd-bM-2Bj"/>
+                        <outlet property="tfWeight" destination="lCw-BQ-dws" id="Fy5-7U-ywg"/>
+                        <outlet property="tpOne" destination="Cks-KQ-EJ6" id="WdJ-6e-pNL"/>
+                        <outlet property="tpTwo" destination="Cuq-Id-hFD" id="pvF-P1-xaj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCZ-6A-mmi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

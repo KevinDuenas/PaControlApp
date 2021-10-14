@@ -8,7 +8,15 @@
 import UIKit
 
 class EditProfileViewController: UIViewController {
-
+    @IBOutlet weak var tfName: UITextField!
+    @IBOutlet weak var tfAC: UITextField!
+    @IBOutlet weak var tfWeight: UITextField!
+    @IBOutlet weak var tfAge: UITextField!
+    @IBOutlet weak var sDRegistry: UISwitch!
+    @IBOutlet weak var tpOne: UIDatePicker!
+    @IBOutlet weak var tpTwo: UIDatePicker!
+    @IBOutlet weak var btSave: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,5 +33,9 @@ class EditProfileViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @IBAction func saveWithButton(_ sender: UIButton) {
+        
+        
+    }
+    
 }
