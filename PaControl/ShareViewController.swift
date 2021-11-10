@@ -37,7 +37,7 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
   
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        dataSource.count
+        1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -57,11 +57,20 @@ class ShareViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let dateAux = dataSource[indexPath.row].date
         let date = dateFormatter.string(from: dateAux)
         
-      
+        let todayRegistry = Day()
+        
+        let checkMark = UIImage(named: "check-mark")
+        let circulation = UIImage(named: "circulation")
+        
         cell.lbdate.text = date
-        cell.lbPA.text = String(dataSource[indexPath.row].pa)
-        cell.lbCA.text = String(dataSource[indexPath.row].ca)
-        cell.lbFC.text = String(dataSource[indexPath.row].fc)
+       
+        cell.imgA1.image = todayRegistry.A1?.pa == nil ? checkMark : circulation
+        cell.imgA2.image =  todayRegistry.A2?.pa != nil ?  checkMark :  circulation
+        cell.imgA3.image =  todayRegistry.A3?.pa != nil ?  checkMark :  circulation
+        
+        cell.imgB1.image =  todayRegistry.B1?.pa != nil ?  checkMark :  circulation
+        cell.imgB2.image =  todayRegistry.B2?.pa != nil ?  checkMark :  circulation
+        cell.imgB3.image =  todayRegistry.B3?.pa != nil ?  checkMark :  circulation
         
         return cell
     }

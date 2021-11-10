@@ -15,10 +15,16 @@ class NewRegistryViewController: UIViewController {
     @IBOutlet weak var btRregistrar: UIButton!
     
     var registries = [Registry]()
+    var todayRegistries = Day()
+    var index : String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "es_MX_POSIX")
+        print("Date", dateFormatter.string(from:todayRegistries.date))
+        print("A1", todayRegistries.A1?.pa)
        
         if let data = UserDefaults.standard.data(forKey: "Data") {
             do {
@@ -34,7 +40,7 @@ class NewRegistryViewController: UIViewController {
                 print("Unable to Decode Notes (\(error))")
             }
         
-    }
+        }
     }
     
     
@@ -44,7 +50,26 @@ class NewRegistryViewController: UIViewController {
             
            let now = Date()
 
-            let newRegistry = Registry(date: now, pa: Int(pa), ca: Int(tfFC.text!)!, fc: Int(tfCA.text!)!)
+            let newRegistry = Registry(date: now, pa: Int(pa), index: "A1", ca: Int(tfFC.text!)!, fc: Int(tfCA.text!)!)
+            
+            
+            switch index{
+            case "A1":
+                todayRegistries.A1 = newRegistry
+            case "A2":
+                todayRegistries.A2 = newRegistry
+            case "A3":
+                todayRegistries.A3 = newRegistry
+            case "B1":
+                todayRegistries.B1 = newRegistry
+            case "B2":
+                todayRegistries.B2 = newRegistry
+            case "B3":
+                todayRegistries.B3 = newRegistry
+                
+            default:
+                print("not valid index")
+            }
             
             
             registries.append(newRegistry)
@@ -71,6 +96,19 @@ class NewRegistryViewController: UIViewController {
             alerta.addAction(accion)
             present(alerta, animated: true, completion: nil)
         }
+    }
+    
+    
+    
+    
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        let tabController = presentingViewController as! UITabBarController
+        let vistaIni =   tabController.viewControllers![0] as! HomeViewController
+          vistaIni.changeMarks()
+        
     }
     
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD119B92734C53000CA8C8D /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD119B82734C53000CA8C8D /* Day.swift */; };
+		0AD119BB2734CEEA00CA8C8D /* DoctorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD119BA2734CEEA00CA8C8D /* DoctorInfoViewController.swift */; };
+		0AD119BD2734CEF600CA8C8D /* EditDoctorInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD119BC2734CEF600CA8C8D /* EditDoctorInfoViewController.swift */; };
 		6C1BF5FA2719E8FE00840348 /* Registry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BF5F92719E8FE00840348 /* Registry.swift */; };
 		6C1BF5FC271A02ED00840348 /* RegistryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C1BF5FB271A02ED00840348 /* RegistryCell.swift */; };
 		6C9D42A627172C4D009EF8B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D42A527172C4D009EF8B8 /* AppDelegate.swift */; };
@@ -43,6 +46,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AD119B82734C53000CA8C8D /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		0AD119BA2734CEEA00CA8C8D /* DoctorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorInfoViewController.swift; sourceTree = "<group>"; };
+		0AD119BC2734CEF600CA8C8D /* EditDoctorInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDoctorInfoViewController.swift; sourceTree = "<group>"; };
 		6C1BF5F92719E8FE00840348 /* Registry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Registry.swift; sourceTree = "<group>"; };
 		6C1BF5FB271A02ED00840348 /* RegistryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistryCell.swift; sourceTree = "<group>"; };
 		6C9D42A227172C4D009EF8B8 /* PaControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PaControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,8 +125,11 @@
 				6C9D42A727172C4D009EF8B8 /* SceneDelegate.swift */,
 				6C9D42A927172C4D009EF8B8 /* ViewController.swift */,
 				6C9D42AB27172C4D009EF8B8 /* Main.storyboard */,
+				0AD119BA2734CEEA00CA8C8D /* DoctorInfoViewController.swift */,
+				0AD119BC2734CEF600CA8C8D /* EditDoctorInfoViewController.swift */,
 				6C1BF5FB271A02ED00840348 /* RegistryCell.swift */,
 				6C1BF5F92719E8FE00840348 /* Registry.swift */,
+				0AD119B82734C53000CA8C8D /* Day.swift */,
 				6C9D42DF27173364009EF8B8 /* ShareViewController.swift */,
 				6C9D42DD2717333A009EF8B8 /* InfoViewController.swift */,
 				6C9D42DB27173315009EF8B8 /* NewRegistryViewController.swift */,
@@ -282,8 +291,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AD119BB2734CEEA00CA8C8D /* DoctorInfoViewController.swift in Sources */,
 				6C9D42AA27172C4D009EF8B8 /* ViewController.swift in Sources */,
 				6C9D42A627172C4D009EF8B8 /* AppDelegate.swift in Sources */,
+				0AD119BD2734CEF600CA8C8D /* EditDoctorInfoViewController.swift in Sources */,
+				0AD119B92734C53000CA8C8D /* Day.swift in Sources */,
 				6C9D42DA271732E5009EF8B8 /* EditProfileViewController.swift in Sources */,
 				6C9D42D827173267009EF8B8 /* ProfileViewController.swift in Sources */,
 				6C9D42A827172C4D009EF8B8 /* SceneDelegate.swift in Sources */,
@@ -477,7 +489,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KevinDuenasA01283104.PaControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -495,7 +507,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = KevinDuenasA01283104.PaControl;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
